@@ -3,12 +3,9 @@ FROM node:alpine
 
 RUN apk add --update git asciidoctor libc6-compat libstdc++ \
     && apk upgrade \
-    && apk add --no-cache ca-certificates \
-    && apk add --no-cache nano \
-    && cd / \
-    && npx degit --force mihaimiculescu/docker-svelte-template sveltedev 
+    && apk add --no-cache ca-certificates
     
-WORKDIR /sveltedev
+WORKDIR /app
 
 COPY package.json .
 

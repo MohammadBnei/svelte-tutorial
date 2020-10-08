@@ -4,8 +4,8 @@ services:
     svelte:
         build: .
         volumes:
-            - ./src:/sveltedev/src
-            - ./public:/sveltedev/public
+            - /app/node_modules
+            - ./:/app
         ports: 
             - 5000:5000 
             - 35729:35729 
