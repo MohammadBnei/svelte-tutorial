@@ -1,4 +1,9 @@
 <script>
+	import BindingDemo from "./BindingDemo.svelte";
+	import EventDemo from "./EventDemo.svelte";
+	import Greeting from "./Greeting.svelte";
+	import LogIn from "./LogIn.svelte";
+
 	export let name;
 </script>
 
@@ -13,3 +18,11 @@
 Please refer to <a href="https://svelte.dev/tutorial/basics">the Svelte tutorial</a> for further info.<br>
 	<strong> Good luck!</strong>
 	</p>
+<Greeting first_name="Moha" last_name="Med"/>
+
+<LogIn />
+
+<EventDemo />
+
+<BindingDemo />
+
