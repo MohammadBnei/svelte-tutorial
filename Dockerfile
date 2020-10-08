@@ -8,9 +8,10 @@ RUN apk add --update git asciidoctor libc6-compat libstdc++ \
     && cd / \
     && npx degit --force mihaimiculescu/docker-svelte-template sveltedev 
     
-VOLUME /sveltedev/src
-VOLUME /sveltedev/public
-
 WORKDIR /sveltedev
 
-EXPOSE 5000 35729 3572
+COPY package.json .
+
+RUN npm install
+
+CMD npm run dev
